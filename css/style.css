@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+.hero {
+  min-height: 100vh;
+  max-width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0000007d), to(#0000007d)), url("../img/Rectangle.jpg");
+  background: linear-gradient(0deg, #0000007d, #0000007d), url("../img/Rectangle.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.hero span {
+  color: #e5e5e5;
+  font-weight: 300;
+  font-size: 48px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hero span b {
+  color: #ff6332;
+  font-weight: 900;
+}
+
+.photo-section {
+  background-color: #ffffff;
+  padding: 64px 32px;
+}
+
+.photo-section__content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+}
+
+.photo-section__content ul li {
+  margin-bottom: 32px;
+}
+
+.photo-section__content ul li img {
+  width: 100%;
+}
+
+.instagram-section__photo {
+  margin-bottom: 20px;
+}
+
+.instagram-section__photo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  list-style: none;
+}
+
+.instagram-section__photo li {
+  margin-bottom: 10px;
+}
+
+.instagram-section__photo li img {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.instagram-section__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.instagram-section__content span {
+  color: #e5e5e5;
+  font-weight: 300;
+  font-size: 26px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.instagram-section__content span strong {
+  color: #ff6332;
+  font-weight: 900;
+}
+
+.footer {
+  background-color: #000000;
+}
+
+.footer__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__text span {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  color: #e5e5e5;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1440px;
+    padding: 0;
+  }
+  .hero {
+    width: 1440px;
+  }
+  .photo-section__content ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .photo-section__content ul li {
+    margin-right: 32px;
+  }
+  .instagram-section {
+    width: 1440px;
+    height: 568px;
+    position: relative;
+  }
+  .instagram-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: -webkit-gradient(linear, left bottom, left top, from(#0000007d), to(#0000007d));
+    background: linear-gradient(0deg, #0000007d, #0000007d);
+  }
+  .instagram-section__photo ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .instagram-section__photo ul li {
+    margin-bottom: 0;
+  }
+  .instagram-section__content {
+    position: absolute;
+    top: 45%;
+    left: 23%;
+    z-index: 2;
+  }
+  .instagram-section__content span {
+    font-size: 48px;
+  }
+  .footer {
+    width: 1440px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
