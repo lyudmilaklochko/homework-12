@@ -13,6 +13,7 @@ body {
 .container {
   max-width: 1200px;
   padding: 0 15px;
+  margin: 0 auto;
 }
 
 .hero {
@@ -28,31 +29,31 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
 }
 
-.hero span {
-  color: #e5e5e5;
+.hero .container span {
+  color: #ffffff;
   font-weight: 300;
-  font-size: 48px;
+  font-size: 24px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
-.hero span b {
+.hero .container span b {
   color: #ff6332;
   font-weight: 900;
 }
 
 .photo-section {
   background-color: #ffffff;
-  padding: 64px 32px;
+  padding: 32px 0;
 }
 
-.photo-section__content ul {
+.photo-section__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,60 +64,67 @@ body {
   list-style: none;
 }
 
-.photo-section__content ul li {
-  margin-bottom: 32px;
+.photo-section__content li:not(:last-child) {
+  margin-bottom: 15px;
 }
 
-.photo-section__content ul li img {
+.photo-section__content li img {
+  max-width: 345px;
+  max-height: 100%;
+}
+
+.instagram-section {
   width: 100%;
+  position: relative;
+}
+
+.instagram-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0000007d), to(#0000007d));
+  background: linear-gradient(0deg, #0000007d, #0000007d);
 }
 
 .instagram-section__photo {
-  margin-bottom: 20px;
-}
-
-.instagram-section__photo ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
 }
 
 .instagram-section__photo li {
-  margin-bottom: 10px;
+  width: 50%;
 }
 
 .instagram-section__photo li img {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  height: 100%;
+  display: block;
 }
 
 .instagram-section__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
+  position: absolute;
+  top: 46%;
+  left: 2%;
+  z-index: 2;
 }
 
 .instagram-section__content span {
-  color: #e5e5e5;
+  color: #ffffff;
   font-weight: 300;
-  font-size: 26px;
+  font-size: 24px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
@@ -149,7 +157,7 @@ body {
   font-weight: 300;
   font-size: 18px;
   letter-spacing: 0.05em;
-  color: #e5e5e5;
+  color: #ffffff;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -161,10 +169,13 @@ body {
     max-width: 1440px;
     padding: 0;
   }
-  .hero {
-    width: 1440px;
+  .hero .container span {
+    font-size: 48px;
   }
-  .photo-section__content ul {
+  .photo-section {
+    padding: 64px 31px;
+  }
+  .photo-section__content {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-orient: horizontal;
@@ -172,47 +183,27 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .photo-section__content ul li {
+  .photo-section__content li {
     margin-right: 32px;
   }
-  .instagram-section {
-    width: 1440px;
-    height: 568px;
-    position: relative;
+  .photo-section__content li img {
+    max-width: 100%;
   }
-  .instagram-section::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    background: -webkit-gradient(linear, left bottom, left top, from(#0000007d), to(#0000007d));
-    background: linear-gradient(0deg, #0000007d, #0000007d);
+  .instagram-section__photo li {
+    width: 25%;
   }
-  .instagram-section__photo ul {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .instagram-section__photo ul li {
-    margin-bottom: 0;
+  .instagram-section__photo li img {
+    width: 100%;
+    height: 100%;
+    display: block;
   }
   .instagram-section__content {
     position: absolute;
     top: 45%;
     left: 23%;
-    z-index: 2;
   }
   .instagram-section__content span {
     font-size: 48px;
-  }
-  .footer {
-    width: 1440px;
   }
 }
 /*# sourceMappingURL=style.css.map */
